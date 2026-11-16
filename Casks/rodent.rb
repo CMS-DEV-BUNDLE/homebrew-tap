@@ -17,6 +17,14 @@ cask "rodent" do
 
   app "Rodent.app"
 
+  # Rodent is not signed with an Apple Developer ID. Clear the quarantine flag
+  # so Gatekeeper doesn't report the app as "damaged" on first launch.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Rodent.app"],
+                   sudo: false
+  end
+
   zap trash: [
     "~/Library/Application Support/Rodent",
     "~/Library/Preferences/com.cmsdevbundle.rodent.plist",
