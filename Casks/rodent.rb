@@ -1,9 +1,9 @@
 cask "rodent" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.3"
-  sha256 arm:   "8c6a9bc7258a732c6527737c32ded8beab8c4345062b1a903acab7cc10ce4f01",
-         intel: "9b10962c8059bf32f37458dd87babebc7f48794ceb3df1ce3943681c8fef45e0"
+  version "1.3.4"
+  sha256 arm:   "0c8e47fa75ac9fa0b5e7d029f0f1267257cbbe1078e595c29615d4173cd9d039",
+         intel: "56b88c798dfaa0dbb2d1d39db22e668e5aea71f27996778c532aa51d20777523"
 
   url "https://github.com/CMS-DEV-BUNDLE/marketplace/releases/download/v#{version}/Rodent-#{version}-mac-#{arch}.dmg"
   name "Rodent"
